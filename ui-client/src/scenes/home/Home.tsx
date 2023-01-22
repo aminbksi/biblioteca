@@ -1,12 +1,36 @@
+import { observer } from "mobx-react-lite";
+import { useEffect } from "react";
+import { useStore } from "shared/hooks/useStore";
 import { Footer, Navbar } from "../../ui-kit";
 
 import * as styled from "./Home.styled";
+import { BookItem } from "./pages";
 
 const Home = () => {
+  const { homeStore } = useStore();
+
+  useEffect(() => {
+    homeStore.fetchBooks();
+  }, [homeStore]);
   return (
     <>
       <Navbar />
       <styled.HomeContainer>
+        <styled.BooksContainer>
+          <styled.ArrowButton
+            onClick={() => homeStore.setIndex(homeStore.books.length)}
+          >
+            &lt;
+          </styled.ArrowButton>
+          <styled.BooksRow>
+            <BookItem book={homeStore.currentBook} />
+          </styled.BooksRow>
+          <styled.ArrowButton
+            onClick={() => homeStore.setIndex(homeStore.books.length)}
+          >
+            &gt;
+          </styled.ArrowButton>
+        </styled.BooksContainer>
         <styled.TopContainer className="header">
           <styled.InnerContainer>
             <styled.Div>
@@ -36,4 +60,4 @@ const Home = () => {
   );
 };
 
-export default Home;
+export default observer(Home);
