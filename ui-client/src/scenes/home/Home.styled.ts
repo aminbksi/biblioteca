@@ -1,5 +1,27 @@
 import styled from "styled-components";
 
+export const BooksContainer = styled.div`
+  width: 100%;
+  height: 400px;
+  background: grey;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+`;
+
+export const ArrowButton = styled.button`
+  background-color: transparent;
+  color: black;
+  font-size: 1.5rem;
+  padding: 0.5rem;
+  border-style: none;
+  cursor: pointer;
+`;
+
+export const BooksRow = styled.div`
+  width: 300px;
+`;
+
 export const TopContainer = styled.div`
   padding: 5px;
   background-color: #343a40;
