@@ -1,4 +1,5 @@
 import { createGlobalStyle } from "styled-components";
+import image from "../static/images/PublicImages/image-2.jpg";
 
 export const GlobalStyles = createGlobalStyle`
 :root{
@@ -6,7 +7,7 @@ export const GlobalStyles = createGlobalStyle`
 }
 
 .header {
-    background-image: linear-gradient( rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7) ), url("../static/images/PublicImages/image-2.jpg");
+    background-image: linear-gradient( rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7) ), url(${image});
     opacity: var(--mainOpacity);
     height: 25em !important;
 }
