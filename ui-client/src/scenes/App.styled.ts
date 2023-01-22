@@ -6,7 +6,7 @@ export const GlobalStyles = createGlobalStyle`
 }
 
 .header {
-    background-image: linear-gradient( rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7) ), url("./Images/PublicImages/image-2.jpg");
+    background-image: linear-gradient( rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7) ), url("../static/images/PublicImages/image-2.jpg");
     opacity: var(--mainOpacity);
     height: 25em !important;
 }
@@ -55,5 +55,6 @@ background-color: #0e76a8 ;
     pointer-events: none;
     cursor: default;
  }
+
 
 `;
