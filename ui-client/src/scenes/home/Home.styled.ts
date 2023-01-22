@@ -26,7 +26,8 @@ export const HomeButton = styled.button`
   font-size: 1.25rem;
   line-height: 1;
   background: transparent;
-  border: 1px solid white;
+  border: 1px solid grey;
+  background: #343a40;
 
   color: white;
   cursor: pointer;
@@ -51,7 +52,6 @@ export const HomeContainer = styled.div`
 
 export const BottomContainer = styled.div`
   margin-bottom: 5px;
-  background: #343a40;
 `;
 
 export const BottomDiv = styled.div`
